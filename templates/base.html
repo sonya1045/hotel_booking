@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>Booking Application</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Booking</h1>
+    <h1>Books</h1>
     {% block content %}
+    <a href="{% url 'logout' %}">logout</a>
     {% endblock %}
-    <hr>
-    <p>2024</p>
 
 </body>
 </html>

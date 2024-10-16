@@ -31,9 +31,12 @@
             <input type="datetime-local" class="form-control" id="end-time"></input>
         </div>
 
-        <button type="button" class="btn btn-success">Забронювати</button>
+        <a href="{% url 'book-room' %}">
+            <button type="button">Забронювати</button>
+        </a>
 
     </form>
+
 
 </body>
 </html>
