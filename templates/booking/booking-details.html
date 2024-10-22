@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
+    <h1>Booking #{{ booking.id }}</h1>
+    <p>User: {{ booking.user.username }}</p>
+    <p>Room: {{ booking.room }}</p>
+    <p>Time range: {{ booking.start_time }} - {{ booking.end_time }}</p>
 
-<h1>Booking #{{ booking.id }}</h1>
-<p>User: {{ booking.user.username }}</p>
-<p>Room: {{ booking.room }}</p>
-<p>Time range: {{ booking.start_time }} - {{ booking.end_time }}</p>
+</body>
+</html>
+    
