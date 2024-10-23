@@ -12,7 +12,9 @@
     <h1>Список кімнат:</h1>
     <hr>
     {% for room in rooms %}
-        <p>Кімната № {{ room.number }}<p>
+        <a href="{% url 'room-list' %}">
+            Кімната № {{ room.number }}
+        </a>
         <h3>Номер на {{ room.capacity }} людей. Розташований: {{ room.location }} {{room.discription}} </h3>
     {% endfor %}
     

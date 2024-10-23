@@ -3,11 +3,14 @@ from .models import Room, Booking
 from django.http import HttpResponse
 
 def room_list(request):
-    rooms = Room.objects.all()
-    context = {
-        "rooms": rooms,
-    }
-    return render(request, "booking/room_list.html", context)
+    if request.method == "POST":
+        return redirect("room-detail", pk=Room.number)
+    else:
+        rooms = Room.objects.all()
+        context = {
+            "rooms": rooms,
+        }
+        return render(request, "booking/room_list.html", context)
 
 def booking_room(request):
     if request.method == "POST":
@@ -37,4 +40,11 @@ def booking_details(request, pk):
         'booking': booking
     }
     return render(request, "booking/booking-details.html", context)
+
+def room_detail(request, pk):
+    room = Room.objects.get(number=pk)
+    context = {
+        'rooms': room
+    }
+    return render(request, "booking/room-detail.html", context)
             
