@@ -5,3 +5,15 @@ body {
     background-attachment: fixed;
     background-clip: content-box;
 }
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #95f0b2;
+    width: 120px;
+    height: 40px;
+}
+button:hover {
+    background-color: #45a049; /* Інший колір фону при наведенні */            
+}

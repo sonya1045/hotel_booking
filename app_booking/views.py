@@ -46,5 +46,5 @@ def room_detail(request, pk):
     context = {
         'rooms': room
     }
-    return render(request, "booking/room-detail.html", context)
+    return render(request, "booking/room_detail.html", context)
             

@@ -12,13 +12,12 @@
     <h1>Список кімнат:</h1>
     <hr>
     {% for room in rooms %}
-        <a href="{% url 'room-list' %}">
-            Кімната № {{ room.number }}
-        </a>
-        <h3>Номер на {{ room.capacity }} людей. Розташований: {{ room.location }} {{room.discription}} </h3>
+        <h3><a href="{% url 'room-detail' pk=room.number %}">
+            Кімната № {{ room.number }} 
+        </a>на {{ room.capacity }} людей. {{ room.location }}</h3>
+
     {% endfor %}
     
-
     <a href="{% url 'book-room' %}">
         <button type="button">Забронювати</button>
     </a>

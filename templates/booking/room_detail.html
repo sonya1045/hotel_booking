@@ -1,19 +1,24 @@
+{% extends "base.html"  %}
+{% block content %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+        <h2>Кімната № {{ rooms.number }}</h2>
+        <p>Номер на {{ rooms.capacity }} людей.</p>
+        <p> Розташований: {{ rooms.location }} </p>
+        <p> Деталі: {{rooms.discription}} </p>
 
-   
-        <h2>Кімната № {{ room.number }}</h2>
-        <p>Номер на {{ room.capacity }} людей.</p>
-        <p> Розташований: {{ room.location }} </p>
-        <p> Деталі: {{room.discription}} </p>
  
 
 </body>
 </html>
+{% endblock %}
