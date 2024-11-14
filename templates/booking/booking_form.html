@@ -8,23 +8,25 @@
     <meta charset="utf-8">
 </head>
 <body>
+    <h1>Booking...</h1>
+    <hr>
+    <div class="form">
+        <form method="POST" action="{% url 'book-room' %}">
+            {% csrf_token %}
+        
+            <p><label for="room-number">Номер кімнати: </label>
+            <input type="text" name="room-number" id="room-number"></p>
 
-    <form method="POST" action="{% url 'book-room' %}">
-        {% csrf_token %}
-    
-        <label for="room-number">Номер кімнати: </label>
-        <input type="text" name="room-number" id="room-number">
 
+            <p><label for="start-time" >Дата заїзду </label>
+            <input type="datetime-local" id="start-time"></input></p>
 
-        <div id="roomHelp">Бронювання кімнати з.... по....</div>
-        <label for="start-time" >З </label>
-        <input type="datetime-local" id="start-time"></input>
+            <label for="end-time">Дата виїзду </label>
+            <input type="datetime-local" id="end-time" name="end-time"></input>
 
-        <label for="end-time">По ... </label>
-        <input type="datetime-local" id="end-time" name="end-time"></input>
-
-        <p><button type="submit">Забронювати</button></p>
-    </form>
+            <p><button type="submit" class="btn-form">Забронювати</button></p>
+        </form>
+    </div>
 
 
 </body>

@@ -17,7 +17,7 @@ class Room(models.Model):
 class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="bookings")
     room = models.ForeignKey(Room, on_delete = models.CASCADE, related_name = "bookings")
-    start_time = models.DateTimeField()
+    start_time = models.DateTimeField(null=True)
     end_time = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
 
