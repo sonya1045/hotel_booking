@@ -1,25 +1,18 @@
 body {
-    background: linear-gradient(#95f0b2, #e0e247);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-clip: content-box;
     margin-top: 10px;
-    
 }
 
 button {
-    margin-left: 80px;
+    margin-left: 640px;
     font-size: 15px;
     padding: 10px;
     border-radius: 15px;
-    background-color: #95f0b2;
     width: 150px;
     height: 45px;
 }
 
 button:hover {
-    background-color: #45a049; /* Інший колір фону при наведенні */            
+    background-color: #45a049;       
 }
 
 label{

@@ -12,16 +12,11 @@ def room_list(request):
         }
         return render(request, "booking/room_list.html", context)
 
-def booking_room(request):
+def booking_room(request, pk):
     if request.method == "POST":
         start_time = request.POST.get("start-time")
         end_time = request.POST.get("end-time")
-        room_number =  request.POST.get("room-number")
-        try:
-            room = Room.objects.get(number = room_number)
-
-        except Room.DoesNotExist:
-            return HttpResponse("Wrong number", status=404)
+        room = Room.objects.get(number=pk)
         
         booking = Booking.objects.create(
             user = request.user,

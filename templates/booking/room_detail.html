@@ -12,13 +12,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="detail">
-        <h2><b>Кімната № </b>{{ rooms.number }}</h2>
-        <hr>
-        <p>Номер на {{ rooms.capacity }} людей.</p>
-        <p> Розташування: {{ rooms.location }} </p>
-        <p> {{rooms.discription}} </p>
-    </div>
+   
+        <div class="detail">
+            <h2><b>Кімната № </b>{{ rooms.number }}</h2>
+            <hr>
+            <p>Номер на {{ rooms.capacity }} людей.</p>
+            <p> Розташування: {{ rooms.location }} </p>
+            <p> {{rooms.discription}} </p>
+        </div>
+            <a href="{% url 'book-room' pk=room.number %}">
+                <button type="button">Забронювати</button>
+            </a>
+
  
 
 </body>
